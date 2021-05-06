@@ -11,6 +11,10 @@
     package:
       name: openjdk-8-jdk
       state: present
+  - name: Install Maven
+    package:
+       name: maven
+       state: present
   - name: Copy ChromeDriver
     copy:
      src: /home/ubuntu/chromedriver
