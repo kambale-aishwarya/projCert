@@ -12,14 +12,6 @@
   
   - name: Install packages
     apt:
-        name: "{{ item }}"
-        state: installed
+        name: ['apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common', 'docker-ce'] 
+        state: present 
         update_cache: yes
-        with_items:
-             - apt-transport-https
-             - ca-certificates
-             - curl
-             - software-properties-common
-             - docker-ce 
-
-   
